@@ -5,14 +5,14 @@ import { MdOutlineCancel } from 'react-icons/md';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 
 import { links } from '../data/dummy';
+import { useStateContext } from '../contexts/ContextProvider';
 
 const Sidebar = () => {
-  const activeMenu = true;
-  const screenSize = 900;
+  const { currentColor, activeMenu, setActiveMenu, screenSize } = useStateContext();
 
   const handleCloseSideBar = () => {
     if (activeMenu !== undefined && screenSize <= 900) {
-      console.log("test");
+      setActiveMenu(false);
     }
   };
 
@@ -31,6 +31,7 @@ const Sidebar = () => {
             <button
               type="button"
               onClick={() => {}}
+              style={{ color: currentColor }}
               className="text-xl rounded-full p-3 hover:bg-light-gray mt-4 block md:hidden"
             >
               <MdOutlineCancel />
@@ -48,6 +49,9 @@ const Sidebar = () => {
                     to={`/${link.name}`}
                     key={link.name}
                     onClick={handleCloseSideBar}
+                    style={({ isActive }) => ({
+                      backgroundColor: isActive ? currentColor : '',
+                    })}
                     className={({ isActive }) => (isActive ? activeLink : normalLink)}
                   >
                     {link.icon}
