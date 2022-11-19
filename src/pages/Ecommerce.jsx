@@ -103,7 +103,14 @@ const Ecommerce = () => {
               </div>
 
               <div className="mt-5">
-                <SparkLine currentColor={currentColor} id="line-sparkLine" type="Line" height="80px" width="250px" data={SparklineAreaData} color={currentColor} />
+                <SparkLine 
+                currentColor={currentColor} 
+                id="line-sparkLine" 
+                type="Line" 
+                height="80px" 
+                width="250px" 
+                data={SparklineAreaData} 
+                color={currentColor} />
               </div>
               <div className="mt-10">
                 <Button
@@ -115,7 +122,10 @@ const Ecommerce = () => {
               </div>
             </div>
             <div>
-              <Stacked currentMode={currentMode} width="320px" height="360px" />
+              <Stacked 
+              currentMode={currentMode} 
+              width="320px" 
+              height="360px" />
             </div>
           </div>
         </div>
@@ -134,7 +144,14 @@ const Ecommerce = () => {
             </div>
 
             <div className="mt-4">
-              <SparkLine currentColor={currentColor} id="column-sparkLine" height="100px" type="Column" data={SparklineAreaData} width="320" color="rgb(242, 252, 253)" />
+              <SparkLine 
+              currentColor={currentColor} 
+              id="column-sparkLine" 
+              height="100px" 
+              type="Column" 
+              data={SparklineAreaData} 
+              width="320" 
+              color="rgb(242, 252, 253)" />
             </div>
           </div>
 
@@ -145,7 +162,11 @@ const Ecommerce = () => {
             </div>
 
             <div className="w-40">
-              <Pie id="pie-chart" data={ecomPieChartData} legendVisiblity={false} height="160px" />
+              <Pie 
+              id="pie-chart" 
+              data={ecomPieChartData} 
+              legendVisiblity={false} 
+              height="160px" />
             </div>
           </div>
         </div>
@@ -234,7 +255,14 @@ const Ecommerce = () => {
               </div>
             ))}
             <div className="mt-4">
-              <SparkLine currentColor={currentColor} id="area-sparkLine" height="160px" type="Area" data={SparklineAreaData} width="320" color="rgb(242, 252, 253)" />
+              <SparkLine 
+              currentColor={currentColor} 
+              id="area-sparkLine" 
+              height="160px" 
+              type="Area" 
+              data={SparklineAreaData} 
+              width="320" 
+              color="rgb(242, 252, 253)" />
             </div>
           </div>
 
